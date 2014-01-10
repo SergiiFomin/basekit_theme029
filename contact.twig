@@ -47,40 +47,23 @@
             <div class="container">
                 <div class="row">
                     <section class="span12">
+
+                        {{widget('content', 'title1', {content: '<h2>Contact us</h2>', lines: 'all'})|raw}}                                
+                        {{widget('map', 'map', {'height': '628', 'zoom': '15', 'address': 'profile'})|raw}}
+                        {{widget('space', 'space', {'height': '30'})|raw}}
+
                         <div class="row">
-                            <article class="span8 map">
-                                
-                                {{widget('content', 'title1', {content: '<h2>How to Find Us</h2>', lines: 'all'})|raw}}
-
-                                <div class="row">
-                                    <article class="span5 map">
-                                
-                                        {{widget('map', 'map', {'height': '370', 'zoom': '15', 'address': 'profile'})|raw}}
-                                        {{widget('space', 'space', {'height': '30'})|raw}}
-
-                                    </article>
-                                    <article class="span3 address">
-
-                                        {{widget('content', 'text1', {content: '<span class="text">8901 Marmora Road, Glasgow, D04 89GR.</span>', lines: 'all'})|raw}}
-                                        {{widget('content', 'text2', {content: '<span class="width">Freephone:</span>+1 800 559 6580', lines: 'all'})|raw}}
-                                        {{widget('content', 'text3', {content: '<span class="width">Telephone:</span>+1 959 603 6035', lines: 'all'})|raw}}
-                                        {{widget('content', 'text4', {content: '<span class="width">FAX:</span>+1 504 889 9898', lines: 'all'})|raw}}
-                                        {{widget('content', 'text5', {content: '<p>E-mail: <a href="mailto:mail@demolink.org">mail@demolink.org</a></p>', lines: 'all'})|raw}}
-                                        {{widget('content', 'text6', {content: '<span class="text">9863 - 9867 Mill Road, Cambridge, MG09 99HT</span>', lines: 'all'})|raw}}
-                                        {{widget('content', 'text7', {content: '<span class="width">Freephone:</span>+1 800 559 6580', lines: 'all'})|raw}}
-                                        {{widget('content', 'text8', {content: '<span class="width">Telephone:</span>+1 959 603 6035', lines: 'all'})|raw}}
-                                        {{widget('content', 'text9', {content: '<span class="width">FAX:</span>+1 504 889 9898', lines: 'all'})|raw}}
-                                        {{widget('content', 'text10', {content: '<p>E-mail: <a href="mailto:mail@demolink.org">mail@demolink.org</a></p>', lines: 'all'})|raw}}
-                                        {{widget('space', 'space', {'height': '30'})|raw}}
-
-                                    </article>
-                                </div>
-                            </article>
                             <article class="span4">
                                 
-                                {{widget('content', 'title2', {content: '<h2>Contact Form</h2>', lines: 'all'})|raw}}
-                                {{zone('main')|raw}}
+                                {{widget('content', 'title2', {content: '<h2>Addresses</h2>', lines: 'all'})|raw}}
+                                {{widget('profile', 'address', { 'profileType':'address', 'address':'<p class="color">Address 1:</p><p>9870 St Vincent Place, Glasgow, DC 45 Fr 45.</p><p class="color">Phones:</p><p>+1 800 559 6580<br />+1 800 603 6035</p><p class="color">Address 2:</p><p>9863 - 9867 Mill Road, Cambridge, MG09 99HT.</p>'})|raw}}
                                 
+                            </article>
+                            <article class="span8">
+                                
+                                {{widget('content', 'title3', {content: '<h2>Contact form</h2>', lines: 'all'})|raw}}
+                                {{zone('main')|raw}}
+
                             </article>
                         </div>
                     </section>
