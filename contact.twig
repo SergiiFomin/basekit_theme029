@@ -1,0 +1,108 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bg-glow">
+    <div class="global">
+        <!--header-->
+        <header>
+            <div class="header">
+                <div class="container navigation">
+                    <div class="row">
+                        <article class="span12">                            
+
+                            <div class="row">
+                                <article class="span8">
+                                    {{widget('extendednavigation', 'extendednavigation', {"align":"center"})|raw}}
+                                </article>
+                                <article class="span4">
+                                    {{widget('socialicons', 'socialicons', {'googleplus': 'https://plus.google.com', 'linkedin':'http://www.linkedin.com', 'facebook': 'https://www.facebook.com', 'twitter': 'https://twitter.com', 'youtube': 'https://www.youtube.com', 'rss': '#'})|raw}}
+                                </article>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <article class="span12">
+
+                            <div class="row">
+                                <article class="span6">
+                                    {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                                </article>
+                                <article class="span6">
+                                    {{widget('profile', 'form', { 'profileType':'form'})|raw}}
+                                </article>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--content-->
+        <div class="contentInner">
+            <div class="container">
+                <div class="row">
+                    <section class="span12">
+                        <div class="row">
+                            <article class="span8 map">
+                                
+                                {{widget('content', 'title1', {content: '<h2>How to Find Us</h2>', lines: 'all'})|raw}}
+
+                                <div class="row">
+                                    <article class="span5 map">
+                                
+                                        {{widget('map', 'map', {'height': '370', 'zoom': '15', 'address': 'profile'})|raw}}
+                                        {{widget('space', 'space', {'height': '30'})|raw}}
+
+                                    </article>
+                                    <article class="span3 address">
+
+                                        {{widget('content', 'text1', {content: '<span class="text">8901 Marmora Road, Glasgow, D04 89GR.</span>', lines: 'all'})|raw}}
+                                        {{widget('content', 'text2', {content: '<span class="width">Freephone:</span>+1 800 559 6580', lines: 'all'})|raw}}
+                                        {{widget('content', 'text3', {content: '<span class="width">Telephone:</span>+1 959 603 6035', lines: 'all'})|raw}}
+                                        {{widget('content', 'text4', {content: '<span class="width">FAX:</span>+1 504 889 9898', lines: 'all'})|raw}}
+                                        {{widget('content', 'text5', {content: '<p>E-mail: <a href="mailto:mail@demolink.org">mail@demolink.org</a></p>', lines: 'all'})|raw}}
+                                        {{widget('content', 'text6', {content: '<span class="text">9863 - 9867 Mill Road, Cambridge, MG09 99HT</span>', lines: 'all'})|raw}}
+                                        {{widget('content', 'text7', {content: '<span class="width">Freephone:</span>+1 800 559 6580', lines: 'all'})|raw}}
+                                        {{widget('content', 'text8', {content: '<span class="width">Telephone:</span>+1 959 603 6035', lines: 'all'})|raw}}
+                                        {{widget('content', 'text9', {content: '<span class="width">FAX:</span>+1 504 889 9898', lines: 'all'})|raw}}
+                                        {{widget('content', 'text10', {content: '<p>E-mail: <a href="mailto:mail@demolink.org">mail@demolink.org</a></p>', lines: 'all'})|raw}}
+                                        {{widget('space', 'space', {'height': '30'})|raw}}
+
+                                    </article>
+                                </div>
+                            </article>
+                            <article class="span4">
+                                
+                                {{widget('content', 'title2', {content: '<h2>Contact Form</h2>', lines: 'all'})|raw}}
+                                {{zone('main')|raw}}
+                                
+                            </article>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!--footer-->
+        <footer>
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <section class="span12">
+
+                            {{widget('companyname', 'companyname', {"business": "Protecting"})|raw}}
+                            {{widget('profile', 'copyright', { 'profileType':'copyright', 'copyright':'© 2014. All rights reserved'})|raw}}
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>    
+</div>
+
+{% endblock %}

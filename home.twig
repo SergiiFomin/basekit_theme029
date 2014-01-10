@@ -1,0 +1,153 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bg-glow">    
+    <div class="global">
+        <!--header-->
+        <header>
+            <div class="header">
+                <div class="container navigation">
+                    <div class="row">
+                        <article class="span12">                            
+
+                            <div class="row">
+                                <article class="span8">
+                                    {{widget('extendednavigation', 'extendednavigation', {"align":"center"})|raw}}
+                                </article>
+                                <article class="span4">
+                                    {{widget('socialicons', 'socialicons', {'googleplus': 'https://plus.google.com', 'linkedin':'http://www.linkedin.com', 'facebook': 'https://www.facebook.com', 'twitter': 'https://twitter.com', 'youtube': 'https://www.youtube.com', 'rss': '#'})|raw}}
+                                </article>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <article class="span12">
+
+                            <div class="row">
+                                <article class="span6">
+                                    {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                                </article>
+                                <article class="span6">
+                                    {{widget('profile', 'form', { 'profileType':'form'})|raw}}
+                                </article>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="showcase">
+            <div class="container">
+                <div class="row">
+                    {{widget('space', 'space', {'height': '40'})|raw}}
+                    <article class="span3">
+
+                        {{widget('content', 'content', {content: '<ul class="item-list1"><li><a href="#">Check app status</a></li><li><a href="#">FAQ</a></li><li><a href="#">Forms & Apps</a></li><li><a href="#">Guides & pamphlets</a></li><li><a href="#">Board meetings</a></li><li><a href="#">Important links</a></li><li><a href="#">Military personnel</a></li><li><a href="#">Most wanted</a></li><li><a href="#">Newsroom</a></li></ul>', lines: 'all'})|raw}}
+
+                    </article>
+                    <article class="span9">
+
+                        {{widget('responsiveslideshow', 'responsiveslideshow', {'duration':'3', 'crop':1, 'transSpeed': '1000', 'transType': 'fade', 'showDescription': false, 'showTitle': false, 'showButtons': true, 'showBullets': false, 'allowPause': false, 'allowLoop': false, 'images':[{'imageHeight':'414', 'imageWidth':'870', 'url':asset('/images/slider/slide-1.jpg'), 'title':'title', 'description': 'Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolo'}, {'imageHeight':'414','imageWidth':'870', 'url':asset('/images/slider/slide-2.jpg'), 'title':'title', 'description': 'Aenean aliquet suscipit velit, sed gravida sem egestas quis. Praesent semper vitae nisl porta ornare.'}, {'imageHeight':'414', 'imageWidth':'870', 'url':asset('/images/slider/slide-3.jpg'), 'title':'title', 'description': 'Nam blandit elementum dolor sit amet condimentum. Praesent sodales nunc id hendrerit sollicitudin.'}]})|raw}}
+
+                    </article>
+                </div>
+            </div>
+        </div>
+        <!--content-->
+        <div class="contentInner">
+            <div class="container">
+                <div class="row">
+                    <article class="span12">
+                        <div class="row">
+                            <article class="span4 blockcolor color1">
+                                {{widget('content', 'title1', {content: '<h2 class="bg1">Protecting consumers</h2>', lines: 'all'})|raw}}
+                                {{widget('content', 'text1', {content: '<p class="color">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt.</p><p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet conse ctetur adipisicing elit.</p>', lines: 'all'})|raw}}
+                                {{widget('button', 'button1', {italic: false, text:'button', 'align':'widget-align-left'})|raw}}
+                                {{widget('space', 'space', {'height': '50'})|raw}}
+                            </article>
+                            <article class="span4 blockcolor color2">
+                                {{widget('content', 'title2', {content: '<h2 class="bg2">Help & support</h2>', lines: 'all'})|raw}}
+                                {{widget('content', 'text2', {content: '<p class="color">Dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt.</p><p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet conse ctetur adipisicing elit.</p>', lines: 'all'})|raw}}
+                                {{widget('button', 'button2', {italic: false, text:'button', 'align':'widget-align-left'})|raw}}
+                                {{widget('space', 'space', {'height': '50'})|raw}}
+                            </article>
+                            <article class="span4 blockcolor color3">                                
+                                {{widget('content', 'title3', {content: '<h2 class="bg3">File a complaint</h2>', lines: 'all'})|raw}}
+                                {{widget('content', 'text3', {content: '<p class="color">Ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt.</p><p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet conse ctetur adipisicing elit.</p>', lines: 'all'})|raw}}
+                                {{widget('button', 'button3', {italic: false, text:'button', 'align':'widget-align-left'})|raw}}
+                                {{widget('space', 'space', {'height': '50'})|raw}}
+                            </article>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="contentInner">
+            <div class="container">
+                <div class="row">
+                    <article class="span12">
+                        <div class="row">
+                            <article class="span4">
+                                {{widget('content', 'title4', {content: '<h2>Welcome!</h2>', lines: 'all'})|raw}}
+                                {{widget('content', 'content1', {content: '<p class="color">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt.</p><p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet conse ctetur adipisicing elit.</p><p>Dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet conse ctetur adipisicing elit.</p>', lines: 'all'})|raw}}
+                                {{widget('button', 'button4', {italic: false, text:'button', 'align':'widget-align-left'})|raw}}
+                                {{widget('space', 'space', {'height': '40'})|raw}}
+                            </article>
+                            <article class="span4">
+                                {{widget('content', 'title5', {content: '<h2>General info</h2>', lines: 'all'})|raw}}
+                                {{widget('content', 'content2', {content: '<ul class="item-list"><li><a href="#">Lorem ipsum dolor sit amet</a></li><li><a href="#">Conse ctetur adipisicing</a></li><li><a href="#">Elit sed do eiusmod tempor</a></li><li><a href="#">Incididunt ut labore</a></li><li><a href="#">Et dolore magna aliqua</a></li><li><a href="#">Ut enim ad minim veniam</a></li><li><a href="#">Quis nostrud exercitation</a></li></ul>', lines: 'all'})|raw}}
+                                {{widget('button', 'button5', {italic: false, text:'button', 'align':'widget-align-left'})|raw}}
+                                {{widget('space', 'space', {'height': '40'})|raw}}
+                            </article>
+                            <article class="span4">
+                                {{widget('content', 'title6', {content: '<h2>Latest news</h2>', lines: 'all'})|raw}}
+                                <figure class="fleft">{{widget('image', 'image1', { 'src': asset('images/pages/page1-img1.jpg'), 'imageWidth': '170px'})|raw}}</figure>
+                                <div class="overflow">                                    
+                                    {{widget('content', 'content', {content: '<time>February 22, 2013</time><a href="#">Lorem ipsum dolor sit amet conse ctetur adipisicing elit sed d</a>', lines: 'all'})|raw}}
+                                </div>
+                                <div class="clear"></div>
+                                {{widget('line', 'line', {'thickness': 'inherit', 'padding': 'inherit', 'length':'inherit', 'align': 'center'})|raw}}
+                                <figure class="fleft">{{widget('image', 'image1', { 'src': asset('images/pages/page1-img2.jpg'), 'imageWidth': '170px'})|raw}}</figure>
+                                <div class="overflow">
+                                    
+                                    {{widget('content', 'content', {content: '<time>February 22, 2013</time><a href="#">Lorem ipsum dolor sit amet conse ctetur adipisicing elit sed d</a>', lines: 'all'})|raw}}
+                                </div>
+                                <div class="clear"></div>
+                                {{widget('space', 'space', {'height': '33'})|raw}}
+                                {{widget('button', 'button6', {italic: false, text:'button', 'align':'widget-align-left'})|raw}}
+                                {{widget('space', 'space', {'height': '40'})|raw}}
+                            </article>
+                        </div>
+
+                        {{zone('main')|raw}}
+
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <!--footer-->
+        <footer>
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <section class="span12">
+
+                            {{widget('companyname', 'companyname', {"business": "Protecting"})|raw}}
+                            {{widget('profile', 'copyright', { 'profileType':'copyright', 'copyright':'© 2014. All rights reserved'})|raw}}
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>    
+</div>
+
+{% endblock %}

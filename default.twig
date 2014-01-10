@@ -1,0 +1,73 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bg-glow">
+    <div class="global">
+        <!--header-->
+        <header>
+            <div class="header">
+                <div class="container navigation">
+                    <div class="row">
+                        <article class="span12">                            
+
+                            <div class="row">
+                                <article class="span8">
+                                    {{widget('extendednavigation', 'extendednavigation', {"align":"center"})|raw}}
+                                </article>
+                                <article class="span4">
+                                    {{widget('socialicons', 'socialicons', {'googleplus': 'https://plus.google.com', 'linkedin':'http://www.linkedin.com', 'facebook': 'https://www.facebook.com', 'twitter': 'https://twitter.com', 'youtube': 'https://www.youtube.com', 'rss': '#'})|raw}}
+                                </article>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <article class="span12">
+
+                            <div class="row">
+                                <article class="span6">
+                                    {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                                </article>
+                                <article class="span6">
+                                    {{widget('profile', 'form', { 'profileType':'form'})|raw}}
+                                </article>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--content-->
+        <div class="container">
+            <div class="row">
+                <article class="span12">
+
+                    {{zone('main')|raw}}
+
+                </article>
+            </div>
+        </div>
+        <!--footer-->
+        <footer>
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <section class="span12">
+
+                            {{widget('companyname', 'companyname', {"business": "Protecting"})|raw}}
+                            {{widget('profile', 'copyright', { 'profileType':'copyright', 'copyright':'© 2014. All rights reserved'})|raw}}
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>    
+</div>
+
+{% endblock %}

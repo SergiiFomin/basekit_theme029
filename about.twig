@@ -1,0 +1,137 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bg-glow">    
+    <div class="global">
+        <!--header-->
+        <header>
+            <div class="header">
+                <div class="container navigation">
+                    <div class="row">
+                        <article class="span12">                            
+
+                            <div class="row">
+                                <article class="span8">
+                                    {{widget('extendednavigation', 'extendednavigation', {"align":"center"})|raw}}
+                                </article>
+                                <article class="span4">
+                                    {{widget('socialicons', 'socialicons', {'googleplus': 'https://plus.google.com', 'linkedin':'http://www.linkedin.com', 'facebook': 'https://www.facebook.com', 'twitter': 'https://twitter.com', 'youtube': 'https://www.youtube.com', 'rss': '#'})|raw}}
+                                </article>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <article class="span12">
+
+                            <div class="row">
+                                <article class="span6">
+                                    {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                                </article>
+                                <article class="span6">
+                                    {{widget('profile', 'form', { 'profileType':'form'})|raw}}
+                                </article>
+                            </div>
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--content-->
+        <div class="contentInner">
+            <div class="container">
+                <div class="row">
+                    <article class="span12">
+                        <div class="row">
+                            <article class="span4">
+                                {{widget('content', 'title1', {content: '<h2>About us</h2>', lines: 'all'})|raw}}
+                                {{widget('image', 'image1', { 'src': asset('images/pages/page2-img1.jpg'), 'imageWidth': '370px'})|raw}}
+                                {{widget('content', 'content1', {content: '<p class="color">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt.</p><p>Nam aliquam pretium feugiat. Duis sem est, viverra eu interdum ac, suscipit nec mauris. Suspendisse commodo tempor sagittis! In justo est, sollicitudin eu scelerisque pretium, placerat eget elit. Praesent faucibus rutrum odio at rhoncus. Pellentesque vitae tortor id neque fermentum pretium.</p><p>Maecenas ac lacus ut neque rhoncus laoreet sed id tellus. Donec justo tellus, tincidunt vitae pellentesque nec, pharetra a orci. Praesent nunc nunc, egestas eget elementum sed; rutrum eget metus! Vestibulum congue congue dui ut porta. Aenean laoreet viverra turpis, a commodo purus eleifend a. Nam lacus dui; egestas ut aliquam nec, eleifend sit amet est.</p>', lines: 'all'})|raw}}
+                                {{widget('space', 'space', {'height': '40'})|raw}}
+                            </article>
+                            <article class="span4">
+                                {{widget('content', 'title2', {content: '<h2>Our history</h2>', lines: 'all'})|raw}}
+                                {{widget('content', 'content2', {content: '<p class="color">Nam lacus dui; egestas ut aliquam nec, eleifend sit amet est. Nam justo elit, dictum id tempus a</p><p>Nam lacus dui; egestas ut aliquam nec, eleifend sit amet est. Nam justo elit, dictum id tempus a, ultricies tempus lacus. Nunc purus nibh; eleifend eget facilisis ac, sagittis non tortor. Vivamus eu enim a orci accumsan tincidunt ut ut elit. Vestibulum nisi orci.</p><p class="color">In non pellentesque ipsum bitur facilisis pellentesque pharet onec justo urna, malesuada</p><p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet.</p><p class="color">Suspendisse commodo tempor sagittis! In justo est, sollicitudin eu scelerisque pretium, placerat</p><p>In justo est, sollicitudin eu scelerisque pretium, placerat eget elit. Praesent faucibus rutrum odio at rhoncus. Pellentesque vitae tortor id neque fermentum pretium. Maecenas ac lacus ut neque</p>', lines: 'all'})|raw}}
+                                {{widget('button', 'button', {italic: false, text:'button', 'align':'widget-align-left'})|raw}}
+                                {{widget('space', 'space', {'height': '40'})|raw}}
+                            </article>
+                            <article class="span4">
+                                {{widget('content', 'title3', {content: '<h2>Our people</h2>', lines: 'all'})|raw}}
+                                {{widget('gallery', 'people', 
+                                    {'showDescription': false,
+                                    'showTitle': false,
+                                    'images':
+                                    [
+                                    {'imageHeight':'170', 'imageWidth':'170', 'url':asset('/images/people/img1.jpg'), 'title':'title1', 'description': 'This is image 1'},
+                                    {'imageHeight':'170', 'imageWidth':'170', 'url':asset('/images/people/img2.jpg'), 'title':'title2', 'description': 'This is image 2'},
+                                    {'imageHeight':'170', 'imageWidth':'170', 'url':asset('/images/people/img3.jpg'), 'title':'title3', 'description': 'This is image 3'},
+                                    {'imageHeight':'170', 'imageWidth':'170', 'url':asset('/images/people/img4.jpg'), 'title':'title4', 'description': 'This is image 4'},
+                                    {'imageHeight':'170', 'imageWidth':'170', 'url':asset('/images/people/img5.jpg'), 'title':'title5', 'description': 'This is image 5'},
+                                    {'imageHeight':'170', 'imageWidth':'170', 'url':asset('/images/people/img6.jpg'), 'title':'title6', 'description': 'This is image 6'}
+                                    ]
+                                })|raw}}
+                                {{widget('space', 'space', {'height': '40'})|raw}}
+                            </article>
+                        </div>
+
+
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="contentInner">
+            <div class="container">
+                <div class="row">
+                    <article class="span12">
+                        {{widget('content', 'title4', {content: '<h2>Testimonials</h2>', lines: 'all'})|raw}}
+
+                        <div class="row">
+                            <article class="span3">
+                                {{widget('content', 'content3', {content: '<blockquote>In justo est, sollicitudin eu scelerisque pretium, placerat eget elit. Praesent faucibus rutrum odio at rhoncus. Pel lentesque vitae tortor id neque fermentum pretium. Maecenas ac lacus ut neque rhoncus</blockquote><div class="color">John Franklin</div><a href="mailto:www.demolink.org">www.demolink.org</a>', lines: 'all'})|raw}}
+                                {{widget('space', 'space', {'height': '40'})|raw}}
+                            </article>
+                            <article class="span3">
+                                {{widget('content', 'content4', {content: '<blockquote>Praesent faucibus rutrum odio at rhoncus. Pel lentesque vitae tortor id neque mentum pretium. Maecenas ac lacus ut neque rhoncus onec justo tellus, tincidunt vitae pellen tesque nec, pharetra a orci</blockquote><div class="color">Jessica Priston</div><a href="mailto:www.demolink.org">www.demolink.org</a>', lines: 'all'})|raw}}
+                                {{widget('space', 'space', {'height': '40'})|raw}}
+                            </article>
+                            <article class="span3">
+                                {{widget('content', 'content5', {content: '<blockquote>Pel lentesque vitae tortor id neque fermentum pretium. Maecenas ac lacus ut neque rhoncuonec justo tellus, tinci dunt vitae pellentesque nec, pharetra a orci. Praesent nunc nunc, egestas eget elem</blockquote><div class="color">Sam Kromstain</div><a href="mailto:www.demolink.org">www.demolink.org</a>', lines: 'all'})|raw}}
+                                {{widget('space', 'space', {'height': '40'})|raw}}
+                            </article>
+                            <article class="span3">
+                                {{widget('content', 'content6', {content: '<blockquote>Maecenas ac lacus ut neque rhoncus entesque nec, phar etra a orci. Praesent nunc nunc, egestas eget elementum sed; rutrum eget metus! Vestibulum congue congue dui ut porta. Aenean laoreet viverra</blockquote><div class="color">Lewis Tompson</div><a href="mailto:www.demolink.org">www.demolink.org</a>', lines: 'all'})|raw}}
+                                {{widget('space', 'space', {'height': '40'})|raw}}
+                            </article>
+                        </div>
+
+                        {{zone('main')|raw}}
+
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <!--footer-->
+        <footer>
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <section class="span12">
+
+                            {{widget('companyname', 'companyname', {"business": "Protecting"})|raw}}
+                            {{widget('profile', 'copyright', { 'profileType':'copyright', 'copyright':'© 2014. All rights reserved'})|raw}}
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>    
+</div>
+
+{% endblock %}
