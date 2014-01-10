@@ -49,14 +49,21 @@
                     <section class="span12">
 
                         {{widget('content', 'title1', {content: '<h2>Contact us</h2>', lines: 'all'})|raw}}                                
-                        {{widget('map', 'map', {'height': '628', 'zoom': '15', 'address': 'profile'})|raw}}
+                        {{widget('map', 'map', {'height': '540', 'zoom': '15', 'address': 'profile'})|raw}}
                         {{widget('space', 'space', {'height': '30'})|raw}}
 
                         <div class="row">
                             <article class="span4">
                                 
                                 {{widget('content', 'title2', {content: '<h2>Addresses</h2>', lines: 'all'})|raw}}
-                                {{widget('profile', 'address', { 'profileType':'address', 'address':'<p class="color">Address 1:</p><p>9870 St Vincent Place, Glasgow, DC 45 Fr 45.</p><p class="color">Phones:</p><p>+1 800 559 6580<br />+1 800 603 6035</p><p class="color">Address 2:</p><p>9863 - 9867 Mill Road, Cambridge, MG09 99HT.</p>'})|raw}}
+                                {{widget('content', 'text1', {content: '<p class="color">Address 1:</p>', lines: 'all'})|raw}}
+                                {{widget('profile', 'address1', { 'profileType':'address', 'address':'9870 St Vincent Place, Glasgow, DC 45 Fr 45.'})|raw}}
+
+                                {{widget('content', 'text2', {content: '<p class="color">Phone:</p>', lines: 'all'})|raw}}
+                                {{widget('content', 'text3', {content: '+1 800 559 6580<br />+1 800 603 6035', lines: 'all'})|raw}}
+
+                                {{widget('content', 'text4', {content: '<p class="color">Address 2:</p>', lines: 'all'})|raw}}
+                                {{widget('profile', 'address1', { 'profileType':'address', 'address':'9863 - 9867 Mill Road, Cambridge, MG09 99HT.'})|raw}}
                                 
                             </article>
                             <article class="span8">
